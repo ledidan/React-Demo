@@ -1,15 +1,20 @@
 import logo from "./logo.svg";
-import "./App.css";
-import BaiTapDungLayout from "./BaiTapDungLayout/BaiTapDungLayout";
-import DataBinding from "./DataBind/DataBinding";
-import HandlingEvent from "./HandlingEvent/HandlingEvent";
+import EventHandler from "./EventHandler/EventHandler";
+import LoginForm from "./EventHandler/LoginForm";
+import StyleComponent from "./StyleComponent/StyleComponent";
+import BaiTapChonXe from "./StateDemo/BaiTapChonXe/BaiTapChonXe";
+import BaiTapTangGiamFontSize from "./BaiTapTangGiamFontSize/BaiTapTangGiamFontSize";
+import RenderWithMap from "./RenderWithMap/RenderWithMap";
 
 function App() {
   return (
     <div className="App">
       {/* <BaiTapDungLayout /> */}
-      <DataBinding />
-      <HandlingEvent />
+      {/* <EventHandler /> */}
+      {/* <LoginForm /> */}
+      {/* <BaiTapChonXe /> */}
+      {/* <BaiTapTangGiamFontSize /> */}
+      <RenderWithMap />
     </div>
   );
 }
