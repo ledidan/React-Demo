@@ -5,6 +5,10 @@ import StyleComponent from "./StyleComponent/StyleComponent";
 import BaiTapChonXe from "./StateDemo/BaiTapChonXe/BaiTapChonXe";
 import BaiTapTangGiamFontSize from "./BaiTapTangGiamFontSize/BaiTapTangGiamFontSize";
 import RenderWithMap from "./RenderWithMap/RenderWithMap";
+import DemoProps from "./Props/DemoProps/DemoProps";
+import BaiTapQLSP from "./Props/BaiTapQLSP/BaiTapQLSP";
+import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet";
+import CarStore from "./Props/CarStore/CarStore";
 
 function App() {
   return (
@@ -14,7 +18,11 @@ function App() {
       {/* <LoginForm /> */}
       {/* <BaiTapChonXe /> */}
       {/* <BaiTapTangGiamFontSize /> */}
-      <RenderWithMap />
+      {/* <RenderWithMap /> */}
+      {/* <DemoProps /> */}
+      {/* <BaiTapQLSP /> */}
+      {/* <BaiTapXemChiTiet /> */}
+      <CarStore />
     </div>
   );
 }
