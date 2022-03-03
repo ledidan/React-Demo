@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SanPhamProps from "./SanPhamProps";
+import { connect } from "react-redux";
+import GioHang from "./GioHang";
 let phoneJson = [
   {
     maSP: 1,
@@ -38,7 +40,8 @@ let phoneJson = [
     hinhAnh: "./img/imgPhone/applephone.jpg",
   },
 ];
-export default class BaiTapXemChiTiet extends Component {
+
+class BaiTapXemChiTiet extends Component {
   state = {
     viewDetail: {
       maSP: 1,
@@ -85,6 +88,7 @@ export default class BaiTapXemChiTiet extends Component {
     });
   };
   render() {
+    console.log(this.props);
     let {
       maSP,
       tenSP,
@@ -96,16 +100,19 @@ export default class BaiTapXemChiTiet extends Component {
       cameraSau,
       cameraTruoc,
       heDieuHanh,
-    } = this.state.viewDetail;
+    } = this.props.spChiTiet;
+
     return (
       <div className="container">
+        <h2>Giỏ Hàng</h2>
+        <GioHang />
         <h3 className="text-center display-4">Danh sach san pham </h3>
         <div className="row">{this.renderProduct()}</div>
         <div className="mt-2">
           <div className="row">
             <div className="col-4 text-center">
               <h3>{tenSP}</h3>
-              <img src={this.state.viewDetail.hinhAnh} height={300} alt=".." />
+              <img src={hinhAnh} height={300} alt=".." />
             </div>
             <div className="col-8">
               <h3>Thong So Ky Thuat</h3>
@@ -144,3 +151,9 @@ export default class BaiTapXemChiTiet extends Component {
     );
   }
 }
+const mapStateToProps = (rootReducer) => {
+  return {
+    spChiTiet: rootReducer.ProductDetailReducer,
+  };
+};
+export default connect(mapStateToProps)(BaiTapXemChiTiet);
